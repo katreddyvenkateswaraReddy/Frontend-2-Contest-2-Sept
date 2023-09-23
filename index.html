@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        Student Portal
+    </nav>
+    <main>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search" onkeyup="searchStudents()">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="buttons">
+            <button id="sortAZ">Sort A->Z</button>
+            <button id="sortZA">Sort Z->A</button>
+            <button id="sortMarks">Sort by Marks</button>
+            <button id="sortPassing">Sort by Passing</button>
+            <button id="sortClass">Sort by Class</button>
+            <button id="sortGender">Sort by Gender</button>
+        </div>
+        <br>
+        <!-- One table for all students -->
+        <table id="mainTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="student-body"></tbody>
+        </table>
+
+        <!-- Separate tables for male and female students -->
+        <table id="maleTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="male-body"></tbody>
+        </table>
+        <br>
+        <table id="femaleTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Marks</th>
+                    <th>Passing</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="female-body"></tbody>
+        </table>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
