@@ -87,7 +87,7 @@ function filterTable() {
       student.last_name.toLowerCase().includes(searchText) ||
       student.email.toLowerCase().includes(searchText)
   );
-  renderStudent(filteredData, "mainTable");
+  renderStudent(filteredData);
 }
 
 // Event listeners
