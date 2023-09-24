@@ -78,18 +78,6 @@ function renderStudent(displayData = students) {
   });
 }
 
-// Function to filter and update the table based on the search input
-function filterTable() {
-  const searchText = searchInput.value.toLowerCase();
-  const filteredData = students.filter(
-    (student) =>
-      student.first_name.toLowerCase().includes(searchText) ||
-      student.last_name.toLowerCase().includes(searchText) ||
-      student.email.toLowerCase().includes(searchText)
-  );
-  renderStudent(filteredData);
-}
-
 // Event listeners
 window.addEventListener("load", () => {
   fetchData().then(() => {
@@ -183,7 +171,7 @@ function filterTable() {
       student.last_name.toLowerCase().includes(searchText) ||
       student.email.toLowerCase().includes(searchText) 
   );
-  renderTable(filteredData, "mainTable");
+  renderTable(filteredData);
 }
 
 // Event listener for input field change (handles real-time search)
